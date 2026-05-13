@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import Head from 'next/head';
 import Layout from '@/components/layout';
 import TimerCircle from '@/components/timer/TimerCircle';
 import TimerSetup from '@/components/timer/TimerSetup';
@@ -30,6 +31,19 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>시간 누적 타이머 | 카테고리별 시간 관리 앱</title>
+        <meta name="description" content="카테고리별로 시간을 누적 측정하는 타이머 앱. 공부, 운동, 업무 등 활동별 시간을 효율적으로 관리하세요." />
+        <meta name="keywords" content="타이머, 시간 관리, 공부 타이머, 누적 타이머, 카테고리 타이머" />
+        <link rel="canonical" href="https://timer-app-nine-lime.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://timer-app-nine-lime.vercel.app/" />
+        <meta property="og:title" content="시간 누적 타이머 | 카테고리별 시간 관리 앱" />
+        <meta property="og:description" content="카테고리별로 시간을 누적 측정하는 타이머 앱. 공부, 운동, 업무 등 활동별 시간을 효율적으로 관리하세요." />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="시간 누적 타이머" />
+        <meta name="twitter:description" content="카테고리별로 시간을 누적 측정하는 타이머 앱." />
+      </Head>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
 
         {/* 타이머 섹션 */}
